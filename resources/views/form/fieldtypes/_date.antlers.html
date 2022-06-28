@@ -1,0 +1,15 @@
+<input x-data="dateField" class="p-2 w-full rounded" x-bind:id="field.handle" type="text" x-model="submitFields[field.handle]" x-ref="datepicker">
+
+{{ push:scripts }}
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('dateField', () => ({
+            init() {
+                flatpickr(this.$refs.datepicker, {
+                    minDate: new Date()
+                });
+            },
+        }))
+    })
+</script>
+{{ /push:scripts }}

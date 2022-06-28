@@ -1,0 +1,8 @@
+<style>
+:root {
+    --main-color: {{ site_config:main_color | rgba_values_only ?? "201, 61, 27" }};
+    --background-color: {{ site_config:background_color | rgba_values_only ?? "220, 220, 220" }};
+    --text-color: {{ site_config:text_color | rgba_values_only ?? "0, 0, 0" }};
+    --container-background-color: {{ site_config:container_background_color | rgba_values_only ?? "255, 255, 255" }};
+    }
+</style>

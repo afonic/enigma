@@ -1,0 +1,114 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: full_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Full name'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
+          width: 50
+      -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
+            - email
+          width: 50
+      -
+        handle: phone
+        field:
+          input_type: text
+          append: optional
+          antlers: false
+          display: Phone
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          width: 50
+      -
+        handle: persons
+        field:
+          input_type: text
+          antlers: false
+          display: Persons
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
+      -
+        handle: where
+        field:
+          options:
+            beach: Beach
+            lunchDinner: 'Lunch / Dinner'
+            drink: Drink
+          inline: false
+          cast_booleans: false
+          display: Where
+          type: radio
+          icon: radio
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: date
+        field:
+          input_type: date
+          antlers: false
+          display: Date
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
+      -
+        handle: time
+        field:
+          input_type: time
+          antlers: false
+          display: Time
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
+          append: 'please use 24-hour format'
+      -
+        handle: comments
+        field:
+          antlers: false
+          display: Comments
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          read_only: false

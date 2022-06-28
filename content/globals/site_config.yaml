@@ -1,0 +1,9 @@
+title: 'Site config'
+data:
+  site_name: 'Kos island Greece'
+  logo: misirlu-logo.svg
+  main_background: main.jpg
+  social_image:
+    - main.jpg
+  main_color: 'rgba(182, 147, 76, 1)'
+  background_color: 'rgba(182, 147, 76, 1)'

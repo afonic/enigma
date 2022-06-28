@@ -1,0 +1,186 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: site_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Site name'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: meta_description
+        field:
+          character_limit: '160'
+          antlers: false
+          display: 'Meta description'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: facebook_link
+        field:
+          display: 'Facebook link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: instagram_link
+        field:
+          display: 'Instagram link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: google_maps_embed
+        field:
+          antlers: false
+          display: 'Google maps embed'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: address
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: Address
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: phone_number
+        field:
+          input_type: text
+          antlers: false
+          display: 'Phone number'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          read_only: false
+  styling:
+    display: Styling
+    fields:
+      -
+        handle: logo
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Logo
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required
+      -
+        handle: main_background
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Main background'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: social_image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Social image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          max_files: 1
+      -
+        handle: main_color
+        field:
+          theme: classic
+          lock_opacity: true
+          default_color_mode: RGBA
+          color_modes:
+            - rgba
+          display: 'Main color'
+          type: color
+          icon: color
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: background_color
+        field:
+          theme: classic
+          lock_opacity: true
+          default_color_mode: RGBA
+          color_modes:
+            - rgba
+          display: 'Background color'
+          type: color
+          icon: color
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: container_background_color
+        field:
+          theme: classic
+          lock_opacity: true
+          default_color_mode: RGBA
+          color_modes:
+            - rgba
+          display: 'Container background color'
+          type: color
+          icon: color
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: text_color
+        field:
+          theme: classic
+          lock_opacity: true
+          default_color_mode: RGBA
+          color_modes:
+            - rgba
+          display: 'Text color'
+          type: color
+          icon: color
+          listable: hidden
+          instructions_position: above
+          read_only: false

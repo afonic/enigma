@@ -1,0 +1,86 @@
+{{ form:create in="{ form_field:handle }" x-data="formHandler" }}
+<div class="flex flex-wrap" x-data="formFields({{ fields | to_json | entities }})">
+    <template x-for="field in fields" x-bind:key="field.handle">
+        <div x-bind:class="width(field.width)" class="pr-4 last:pr-0 py-4">
+            <div class="flex items-center">
+                <label class="font-bold uppercase" x-text="field.display" x-bind:for="field.handle"></label>
+                <template x-if="field.append">
+                    <span class="ml-2 text-sm" x-text="field.append"></span>
+                </template>
+            </div>            
+            <template x-if="fieldType(field) == 'text'">
+                <div class="mt-2">
+                    {{ partial:form/fieldtypes/text }}
+                </div>
+            </template>
+            <template x-if="fieldType(field) == 'date'">
+                <div class="mt-2">
+                    {{ partial:form/fieldtypes/date }}
+                </div>
+            </template>
+            <template x-if="fieldType(field) == 'time'">
+                <div class="mt-2">
+                    {{ partial:form/fieldtypes/time }}
+                </div>
+            </template>
+            <template x-if="fieldType(field) == 'radio'">
+                <div class="mt-2">
+                    {{ partial:form/fieldtypes/radio }}
+                </div>
+            </template>
+        </div>
+    </template>
+</div>
+{{ /form:create }}
+
+{{ push:scripts }}
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('formFields', (fields) => ({
+            init() {
+                this.fields = fields
+                let formFields = {}            
+                for (const field of fields) {
+                    Object.assign(formFields, {[field.handle]: ''})
+                }
+                this.submitFields = formFields
+            },
+
+            submitFields: {},
+            fields: [],
+
+            fieldType(field) {
+                if (field.input_type == 'text' && field.type == 'text') {
+                    return 'text'
+                }
+                if (field.input_type == 'date' && field.type == 'text') {
+                    return 'date'
+                }
+                if (field.input_type == 'time' && field.type == 'text') {
+                    return 'time'
+                }
+                if (field.type == 'radio') {
+                    return 'radio'
+                }
+            },
+            width(percent) {
+                if (percent == '100') {
+                    return 'w-full'
+                }
+                if (percent == '50') {
+                    return 'w-full xl:w-1/2'
+                }
+                if (percent == '33') {
+                    return 'w-full xl:w-1/3'
+                }
+                if (percent == '25') {
+                    return 'w-full xl:w-1/4'
+                }
+            }
+        }))
+        Alpine.data('formHandler', (fields) => ({
+            
+        }))
+    })
+</script>
+{{ /push:scripts }}
