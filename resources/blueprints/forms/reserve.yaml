@@ -73,6 +73,8 @@ sections:
           listable: hidden
           instructions_position: above
           read_only: false
+          validate:
+            - required
       -
         handle: date
         field:
@@ -112,3 +114,18 @@ sections:
           listable: hidden
           instructions_position: above
           read_only: false
+      -
+        handle: privacy
+        field:
+          inline: false
+          options:
+            agree: 'I consent for the processing of my personal data provided above by Misirlu Seaside Lounge Bar'
+          display: Privacy
+          type: checkboxes
+          icon: checkboxes
+          instructions: hide_display
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          validate:
+            - required

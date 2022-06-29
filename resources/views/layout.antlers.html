@@ -14,9 +14,11 @@
     <body class="bg-background bg-opacity-20 font-sans leading-normal text-txtcolor">
         <div class="xl:container xl:mx-auto my-4 xl:my-8 flex flex-col items-center justify-center bg-container rounded shadow">
             {{ partial:blocks/header }}
-            {{ builder }}
-                {{ partial src="builder/{type}" }}
-            {{ /builder }}
+            <div class="px-8 xl:px-12">
+                {{ builder }}
+                    {{ partial src="builder/{type}" }}
+                {{ /builder }}
+            </div>            
         </div>
         {{ stack:scripts }}
         <script src="{{ mix src='/js/site.js' }}"></script>

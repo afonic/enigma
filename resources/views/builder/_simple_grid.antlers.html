@@ -1,0 +1,20 @@
+<div class="my-8 xl:my-12">
+    {{ if title }}
+    <h2 class="text-2xl xl:text-3xl mb-8 xl:mb-12 text-center">{{ title | strip_tags:p }}</h2>
+    {{ /if }}
+    <div class="{{ grid_container_class ?? 'grid grid-cols-1 xl:grid-cols-2 gap-6' }}">
+        {{ items }}
+        <a class="flex shadow rounded overflow-hidden relative group" href="{{ link }}" target="_blank">
+            <div 
+                class="main-bg w-full h-[35vh] md:h-[600px] bg-cover relative transition-transform duration-700 group-hover:scale-110"
+                style="background-image: url('{{ glide:background preset="small" }}'); {{ if background:focus_css }} background-position: {{ background:focus_css }} {{ /if }}"
+            >
+                <div class="absolute left-0 right-0 top-0 w-full h-full bg-black bg-opacity-20 transition-all duration-700 group-hover:bg-opacity-50"></div>
+            </div>
+            <div class="absolute left-8 bottom-8 z-20">
+                <span class="text-white text-xl xl:text-3xl">{{ label | strip_tags:p }}</span>
+            </div>
+        </a>
+        {{ /items }}
+    </div>
+</div>

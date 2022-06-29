@@ -1,9 +1,13 @@
 @import "tailwindcss/base";
 
-@import "site";
-
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
 
 @import "flatpickr";
+
+[x-cloak] { display: none !important; }
+
+.swiper-slide {
+    width: auto;
+}

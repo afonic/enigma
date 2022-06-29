@@ -87,45 +87,6 @@ sections:
                     instructions_position: above
                     read_only: false
                 -
-                  handle: show_for_xlarge
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: '3'
-                    display: 'Show for xlarge'
-                    type: text
-                    icon: text
-                    width: 33
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: show_for_large
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: '2'
-                    display: 'Show for large'
-                    type: text
-                    icon: text
-                    width: 33
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
-                  handle: show_for_mobile
-                  field:
-                    input_type: text
-                    antlers: false
-                    default: '1'
-                    display: 'Show for mobile'
-                    type: text
-                    icon: text
-                    width: 33
-                    listable: hidden
-                    instructions_position: above
-                    read_only: false
-                -
                   handle: title
                   field:
                     restrict: false
