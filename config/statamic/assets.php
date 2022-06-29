@@ -68,7 +68,8 @@ return [
 
         'presets' => [
             'small' => ['w' => 960, 'q' => 75, 'fit' => 'max'],
-            'large' => ['w' =>  1600, 'q' => 85, 'fit' => 'max'],
+            'large' => ['w' =>  1200, 'q' => 85, 'fit' => 'max'],
+            'placeholder' => ['w' =>  1200, 'q' => 50, 'blur' => 50, 'fit' => 'max'],
         ],
 
     ],

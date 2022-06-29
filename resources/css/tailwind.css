@@ -8,6 +8,10 @@
 
 [x-cloak] { display: none !important; }
 
-.swiper-slide {
-    width: auto;
+.lazy {
+    opacity: 0;
+    transition: opacity 0.25s ease-out;	
+    &[data-ll-status="loaded"] {
+        opacity: 1;
+    }
 }

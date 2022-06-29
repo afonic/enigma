@@ -2,29 +2,29 @@
     {{ if title }}
     <h2 class="text-2xl xl:text-3xl mb-8 xl:mb-12 text-center">{{ title | strip_tags:p }}</h2>
     {{ /if }}
-    <div class="swiper-container relative" x-data="imageSlider" x-id="['image-slider']">
-        <div class="swiper" x-ref="swiper">
-            <div class="swiper-wrapper">
+    <div class="splide relative" x-data="imageSlider" x-id="['image-slider']" x-ref="slider">
+        <div class="splide__track" >
+            <div class="splide__list">
                 {{ images }}
-                <div class="swiper-slide rounded overflow-hidden">
-                    <img class="object-cover max-h-[60vh]" src="{{ glide:url preset="large" }}" alt="" />
+                <div class="splide__slide rounded overflow-hidden">
+                    <img class="object-cover max-h-[60vh]" src="{{ glide:url preset="placeholder" }}" data-splide-lazy="{{ glide:url preset="large" }}" alt="" />
                 </div>
                 {{ /images }}
             </div>
         </div>
-        <div 
-           id="slider-prev'"
-            class="flex items-center justify-center h-20 w-20 absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 cursor-pointer 
-            rounded-r hover:bg-opacity-100 transition-all duration-500"
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-        </div>
-        <div 
-            x-bind:id="$id('image-slider')+'-next'"
-            class="flex items-center justify-center h-20 w-20 absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 cursor-pointer 
-            rounded-l hover:bg-opacity-100 transition-all duration-500"
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>        </div>
+        <div class="splide__arrows">
+            <button 
+                class="splide__arrow splide__arrow--prev flex items-center justify-center h-20 w-20 absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 cursor-pointer 
+                rounded-r hover:bg-opacity-100 transition-all duration-500"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            <button 
+                class="splide__arrow splide__arrow--next flex items-center justify-center h-20 w-20 absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 cursor-pointer 
+                rounded-l hover:bg-opacity-100 transition-all duration-500"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>        </div>
+            </button>
         </div>
     </div>    
 </div>
@@ -34,22 +34,15 @@
     document.addEventListener('alpine:init', () => {
         Alpine.data('imageSlider', () => ({
             init() {
-                var swiper = new window.swiper(this.$refs.swiper, {
-                    modules: [Navigation],
-                    slidesPerView: "auto",
-                    centeredSlides: true,
-                    loop: true,
-                    loopedSlides: 2,
-                    spaceBetween: 16,
-                    navigation: {
-                        nextEl: '#'+this.$id('image-slider')+'-next',
-                        prevEl: '#slider-prev',
-                    },
-                    
-                })
-                setTimeout(() => swiper.slideTo(2), 500)
+                var splide = new Splide(this.$refs.slider, {
+                    type: 'loop',
+                    focus: 'center',
+                    gap: '1rem',
+                    autoWidth: true,
+                    lazyLoad: 'nearby',
+                    preloadPages: 2
+                }).mount()                  
             },
-
         }))
     })
 </script>

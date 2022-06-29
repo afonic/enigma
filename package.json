@@ -22,9 +22,11 @@
     "dependencies": {
         "@alpinejs/mask": "^3.10.2",
         "@ryangjchandler/alpine-mask": "^0.2.0",
+        "@splidejs/splide": "^4.0.7",
         "alpinejs": "^3.10.2",
         "axios": "^0.27.2",
         "flatpickr": "^4.6.13",
-        "swiper": "^8.2.4"
+        "swiper": "^8.2.4",
+        "vanilla-lazyload": "^17.8.2"
     }
 }
