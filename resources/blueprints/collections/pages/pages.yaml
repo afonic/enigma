@@ -210,6 +210,25 @@ sections:
                     listable: hidden
                     instructions_position: above
                     read_only: false
+            contact_details:
+              display: 'Contact details'
+              fields:
+                -
+                  handle: title
+                  field:
+                    restrict: false
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    smartypants: false
+                    antlers: false
+                    display: Title
+                    type: markdown
+                    icon: markdown
+                    instructions: 'Contact details are in global settings. This is a placeholder in order to place it in the homepage.'
+                    listable: hidden
+                    instructions_position: above
+                    read_only: false
           display: Builder
           type: replicator
           icon: replicator
