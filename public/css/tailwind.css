@@ -1956,6 +1956,10 @@ span.flatpickr-weekday {
     min-height: 320px;
   }
 
+  .lg\:min-h-\[360px\] {
+    min-height: 360px;
+  }
+
   .lg\:max-w-full {
     max-width: 100%;
   }
