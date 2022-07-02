@@ -4,11 +4,27 @@ blueprint: pages
 title: 'Misirlu Seaside Lounge Bar'
 template: home
 updated_by: ba27a63e-de6c-453c-8412-674ab2fa36ba
-updated_at: 1656629961
+updated_at: 1656783975
 builder:
   -
-    heading: 'Welcome to **Misirlu** Seaside Lounge Bar'
+    heading: 'Welcome to **Misirlū** Seaside Lounge Bar'
     type: heading
+    enabled: true
+  -
+    text:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Misirlū is an all-day seaside lounge bar to chill under the Greek sun, enjoy delicious flavours by the sea and experience amazing summer vibes. '
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: '#wherethemagichappens'
+    type: intro_text
     enabled: true
   -
     form_field: reserve
@@ -66,7 +82,7 @@ builder:
       - slider/z62_6768.jpg
       - slider/z62_6711.jpg
       - slider/z62_6796.jpg
-    title: 'Have a **look!**'
+    title: 'Need another **look?**'
     type: image_slider
     enabled: true
 ---

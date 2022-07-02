@@ -1,7 +1,7 @@
-<div class="flex" x-data="radioField" x-modelable="selected" x-model="submitFields[field.handle]" role="radiogroup">
+<div class="flex flex-col md:flex-row" x-data="radioField" x-modelable="selected" x-model="submitFields[field.handle]" role="radiogroup">
     <template x-for="(label, id) in field.options">
         <div 
-            class="p-2 flex-1 text-center uppercase text-sm font-bold rounded border border-main mr-4 last:mr-0 cursor-pointer transition-colors duration-500"
+            class="w-full mb-2 md:mb-0 p-2 flex-1 text-center uppercase text-sm font-bold rounded border border-main mr-4 last:mr-0 cursor-pointer transition-colors duration-500"
             role="radio"
             x-bind:aria-checked="id == selected ? true : false"
             x-bind:aria-label="label"

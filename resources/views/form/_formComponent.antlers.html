@@ -8,7 +8,7 @@
     x-transition.opacity
 >
     <template x-for="field in fields" x-bind:key="field.handle">
-        <div x-bind:class="width(field.width)" class="pr-4 py-4">
+        <div x-bind:class="width(field.width)" class="lg:pr-4 py-3 lg:py-4">
             <template x-if="field.instructions !== 'hide_display'">
                 <div class="flex items-center">
                     <label class="font-bold uppercase" x-text="field.display" x-bind:for="field.handle"></label>

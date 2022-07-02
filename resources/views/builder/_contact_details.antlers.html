@@ -1,6 +1,9 @@
 <div class="my-8 xl:my-12">
     <div class="flex flex-col lg:flex-row">
-        <div class="relative flex flex-col justify-between lg:min-h-[360px] w-full xl:w-1/4 bg-main bg-opacity-30 rounded-l pt-3 pb-4 xl:pt-8 xl:pb-6 overflow-hidden">
+        <div 
+            class="relative flex flex-col justify-between min-h-[140px] lg:min-h-[360px] w-full xl:w-1/4 bg-main bg-opacity-30 rounded-t lg:rounded-tr-none 
+            lg:rounded-l pt-8 pb-6 overflow-hidden"
+        >
             {{ if title }}
                 <h2 class="inline-block text-2xl xl:text-3xl mb-4 xl:mb-8 py-2 px-4 xl:px-8 bg-white">{{ title | strip_tags:p }}</h2>
             {{ /if }}
@@ -11,9 +14,9 @@
                 <img src="/assets/misirlu-bg.svg" alt="Misirlu Background">
             </div>
         </div>
-        <div class="flex items-center w-full xl:w-3/4 bg-opacity-10 bg-main rounded-r pt-3 pb-4 xl:pt-8 xl:pb-6 border-l-4 border-white">
-            <div class="w-full px-4 xl:px-8 grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-                <div class="inline-flex flex-col justify-center border-2 border-main group cursor-pointer" x-data="{ open: false }" @click="open = ! open">
+        <div class="flex items-center w-full xl:w-3/4 bg-opacity-10 bg-main rounded-b lg:rounded-bl-0 lg:rounded-r pt-3 pb-4 xl:pt-8 xl:pb-6 border-t-4 lg:border-t-0 lg:border-l-4 border-white">
+            <div class="w-full px-4 xl:px-8 flex flex-col lg:flex-row gap-4 lg:gap-8">
+                <div class="inline-flex flex-col flex-1 justify-center border-2 border-main group cursor-pointer" x-data="{ open: false }" @click="open = ! open">
                     <div class="h-full flex flex-col justify-center items-center p-4">
                         <div class="flex justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -25,7 +28,7 @@
                     </div>
                     {{ partial:blocks/modal }}
                 </div>
-                <a class="inline-flex flex-col justify-center border-2 border-main group" href="tel:{{ site_config:phone_number }}">
+                <a class="inline-flex flex-col flex-1 justify-center border-2 border-main group" href="tel:{{ site_config:phone_number }}">
                     <div class="h-full flex flex-col justify-center items-center p-4">
                         <div class="flex justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -36,8 +39,8 @@
                         Call now
                     </div>
                 </a>
-                <div class="flex flex-col justify-center border-2 border-main">
-                    <div class="mb-4 flex  justify-center space-x-4 lg:space-x-8">
+                <div class="flex flex-col flex-1 justify-center border-2 border-main p-4">
+                    <div class="flex justify-center space-x-4 lg:space-x-8">
                         <a href="{{ site_config:facebook_link }}" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         </a>
