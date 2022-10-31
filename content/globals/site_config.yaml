@@ -1,17 +1,17 @@
 title: 'Site config'
 data:
-  site_name: 'Emmelia Catamaran'
-  facebook_link: 'https://www.facebook.com/istion'
-  instagram_link: 'https://www.instagram.com/istionyachtinggreece/'
-  google_maps_embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30080.86643693975!2d23.669705137286925!3d37.923787152017276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bc18c39aa3db%3A0x5c25b93e058dea81!2sISTION%20Yachting%20Greece!5e0!3m2!1sen!2sgr!4v1667208294556!5m2!1sen!2sgr'
+  site_name: 'Enigma Yachting'
+  facebook_link: 'https://www.facebook.com/Yachthop-204930093384291/'
+  instagram_link: 'https://www.instagram.com/yachthop/'
+  google_maps_embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5662.547902702549!2d25.326047092859902!3d37.460657994626786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a2bf99646de8a7%3A0x7f4f6593f1066ed7!2sTourlos%20Mykonos!5e0!3m2!1sen!2sgr!4v1667234593251!5m2!1sen!2sgr'
   address: |-
-    Alimos Marina
-    Athens, Greece
+    Ornos, Mykonos
+    Greece
   phone_number: '+30 210 9811 515'
   espa_banner: e-bannerespaetpa728x90.jpg
   espa_poster: tourismos_web_emmelia.pdf
-  logo: emmelialogo.png
+  logo: enigmalogo.png
   main_background: main.jpg
   social_image: main.jpg
-  main_color: 'rgba(0, 119, 182, 1)'
-  background_color: 'rgba(0, 119, 182, 1)'
+  main_color: 'rgba(29, 53, 87, 1)'
+  background_color: 'rgba(29, 53, 87, 1)'

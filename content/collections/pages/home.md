@@ -1,13 +1,13 @@
 ---
 id: home
 blueprint: pages
-title: 'Yacht charter in Greece'
+title: 'Boat transfers in Mykonos'
 template: home
 updated_by: ba27a63e-de6c-453c-8412-674ab2fa36ba
-updated_at: 1667218047
+updated_at: 1667234468
 builder:
   -
-    heading: 'Welcome to the webpage for **Emmelia Catamaran** !'
+    heading: 'Welcome to the webpage for **Enigma Yachting** !'
     type: heading
     enabled: true
   -
@@ -23,70 +23,72 @@ builder:
             text: Emmelia
           -
             type: text
-            text: ' is a stunning 46-foot Lagoon 46 catamaran, available for charter in Greece. With 4 cabins, 4 bathrooms and a generously spaced living area, Emmelia can accommodate up to 12 guests for an unforgettable sailing holiday. The feel at the helm is gentle, and you feel the fact that the sails have been brought aft because it tends to head up. It is an excellent feeling, not least because it is on the flybridge and the helm is centrally positioned. Visibility, both forwards and to the side, is always excellent.'
+            text: " is a stunning 12 meter leisure powerboat ideal for\_"
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'recreational cruises'
+          -
+            type: text
+            text: ' or '
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'VIP transfers. '
+          -
+            type: text
+            text: "Its unique hull ensures unrivaled seaworthiness, stability and comfort in all weather conditions and\_"
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'promises a safe, smooth yet fast transfer'
+          -
+            type: text
+            text: "\_to all your desired destinations. One of the safest and most solid boating structures to hit the waters making it the\_"
+          -
+            type: text
+            marks:
+              -
+                type: bold
+            text: 'smoothest ride in its class'
+          -
+            type: text
+            text: .
     type: intro_text
     enabled: true
   -
     feature_list:
-      Brand: Lagoon
-      Model: 'Lagoon 46'
-      'Year build': '2021'
-      Cabins: '6'
-      Heads: '5'
+      Brand: Rafnar
+      Model: '1200 T-Top'
+      'Year build': '2022'
       Passengers: '12'
-      'LOA (m)': '13.99'
-      'Beam (m)': '7.96'
-      'Draft (m)': '1.35'
-      Engines: '2 x 57HP'
-      'Fuel capacity (l)': '1040'
-      'Water capacity (l)': '600'
-      'Mail sail type': 'Full batten'
-      'Main sail area (sq.m.)': '80.5'
-      'Genoa type': 'Self tacking jib'
-      'Genoa sail area (sq.m)': '46.5'
+      'LOA (m)': '12'
+      'Beam (m)': '3.20'
+      'Draft (m)': '0.55'
+      Engines: '3 x 350HP'
+      'Fuel capacity (l)': '600'
     type: features
     enabled: true
     title: Specifications
   -
     images:
-      - slider/Upt2_38995L.jpg
-      - slider/Upt2_38993L.jpg
-      - slider/Upt2_38981L.jpg
-      - slider/Upt2_39008L.jpg
-      - slider/Upt2_39006L.jpg
-      - slider/Upt2_38940L.jpg
-      - slider/Upt2_38943L.jpg
-      - slider/Upt2_38945L.jpg
-      - slider/Upt2_38949L.jpg
-      - slider/Upt2_38955L.jpg
-      - slider/Upt2_38956L.jpg
-      - slider/Upt2_38962L.jpg
-      - slider/Upt2_38966L.jpg
-      - slider/Upt2_38969L.jpg
-      - slider/Upt2_38972L.jpg
-      - slider/Upt2_38974L.jpg
-      - slider/Upt2_38976L.jpg
-      - slider/Upt2_38977L.jpg
-      - slider/Upt2_38978L.jpg
-      - slider/Upt2_38980L.jpg
-      - slider/Upt2_39018L.jpg
-      - slider/Upt2_39036L.jpg
-      - slider/Upt2_39040L.jpg
-      - slider/Upt2_38928L.jpg
-      - slider/Upt2_38924L.jpg
-      - slider/Upt2_38926L.jpg
-      - slider/Upt2_38930L.jpg
-      - slider/Upt2_38921L.jpg
-      - slider/Upt2_38931L.jpg
-      - slider/Upt2_38935L.jpg
-      - slider/Upt2_38920L.jpg
-      - slider/Upt2_38918L.jpg
+      - slider/image00011.jpg
+      - slider/image00012.jpg
+      - slider/image00017.jpg
+      - slider/image00010-banner.jpg
+      - slider/rafnar_2.jpg
     title: 'Image **gallery**'
     type: image_slider
     enabled: true
   -
     form_field: reserve
-    title: 'Enquire **for a charter**'
+    title: 'Enquire **for a transfer**'
     type: form
     enabled: true
   -
