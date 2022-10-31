@@ -1,6 +1,6 @@
 {
-    "name": "Misirlu Seaside Lounge Bar",
-    "short_name": "Misirlu Seaside Lounge Bar",
+    "name": "Emmelia Catamaran",
+    "short_name": "Emmelia Catamaran",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#b6934c",
-    "background_color": "#b6934c",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }

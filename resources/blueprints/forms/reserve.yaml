@@ -59,51 +59,18 @@ sections:
           validate:
             - required
       -
-        handle: where
-        field:
-          options:
-            beach: Beach
-            lunchDinner: 'Lunch / Dinner'
-            drink: Drink
-          inline: false
-          cast_booleans: false
-          display: Where
-          type: radio
-          icon: radio
-          listable: hidden
-          instructions_position: above
-          read_only: false
-          validate:
-            - required
-      -
         handle: date
         field:
           input_type: date
           antlers: false
-          display: Date
+          display: 'Starting date'
           type: text
           icon: text
-          width: 50
           listable: hidden
           instructions_position: above
           read_only: false
           validate:
             - required
-      -
-        handle: time
-        field:
-          input_type: time
-          antlers: false
-          display: Time
-          type: text
-          icon: text
-          width: 50
-          listable: hidden
-          instructions_position: above
-          read_only: false
-          validate:
-            - required
-          append: 'please use 24-hour format'
       -
         handle: comments
         field:
@@ -119,7 +86,7 @@ sections:
         field:
           inline: false
           options:
-            agree: 'I consent for the processing of my personal data provided above by Misirlu Seaside Lounge Bar'
+            agree: 'I consent for the processing of my personal data provided above by Emmelia Catamaran'
           display: Privacy
           type: checkboxes
           icon: checkboxes

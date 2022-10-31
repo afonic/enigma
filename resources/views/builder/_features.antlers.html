@@ -1,0 +1,32 @@
+<div class="my-8 xl:my-12">
+    <div class="flex flex-col lg:flex-row">
+        <div 
+            class="relative flex flex-col justify-between min-h-[140px] lg:min-h-[360px] w-full xl:w-1/4 bg-main bg-opacity-30 rounded-t lg:rounded-tr-none 
+            lg:rounded-l pt-8 pb-6 overflow-hidden"
+        >
+            {{ if title }}
+                <h2 class="inline-block text-2xl xl:text-3xl mb-4 xl:mb-8 py-2 px-4 xl:px-8 bg-white">{{ title | strip_tags:p }}</h2>
+            {{ /if }}
+            <div class="px-4 xl:px-8">
+
+            </div>
+        </div>
+        <div class="flex justify-center w-full xl:w-3/4 bg-opacity-10 bg-main rounded-b lg:rounded-bl-0 lg:rounded-r pt-3 pb-4 xl:pt-8 xl:pb-6 border-t-4 lg:border-t-0 lg:border-l-4 border-white">
+            <div class="grid grid-cols-2 xl:grid-cols-4 gap-3">
+                {{ foreach:feature_list }}
+                <div class="flex flex-col">
+                    <div class="font-light uppercase mb-1">
+                        {{ key }}
+                    </div>
+                    <div>
+                        {{ value }}
+                    </div>
+                </div>
+                {{ /foreach:feature_list }}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

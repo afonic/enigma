@@ -3,7 +3,7 @@
     <h2 class="text-2xl xl:text-3xl mb-8 xl:mb-12 text-center">{{ title | strip_tags:p }}</h2>
     {{ /if }}
     <div class="splide relative" x-data="imageSlider" x-id="['image-slider']" x-ref="slider">
-        <div class="splide__track" >
+        <div class="splide__track">
             <div class="splide__list">
                 {{ images }}
                 <div class="splide__slide rounded overflow-hidden max-w-[80%]">
@@ -23,11 +23,12 @@
                 class="splide__arrow splide__arrow--next flex items-center justify-center h-10 xl:h-20 w-10 xl:w-20 absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-80 cursor-pointer 
                 rounded-l hover:bg-opacity-100 transition-all duration-500"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>        </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>        
+            
             </button>
         </div>
-    </div>    
-</div>
+    </div>
+</div>    
 
 {{ push:scripts }}
 <script>
