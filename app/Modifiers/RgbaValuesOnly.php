@@ -16,7 +16,16 @@ class RgbaValuesOnly extends Modifier
      */
     public function index($value, $params, $context)
     {
+        if (empty($value)) {
+            return null;
+        }
+
         preg_match_all('~\(([^()]*)\)~', $value, $matches);
+
+        if (empty($matches[1])) {
+            return null;
+        }
+
         return preg_replace('/,[^,]*$/', '', $matches[1][0]);
     }
 }

@@ -1,13 +1,16 @@
-module.exports = {
+import typography from '@tailwindcss/typography';
+
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
     './resources/**/*.antlers.html',
     './resources/**/*.blade.php',
     './resources/**/*.vue',
-    './content/**/*.md'
+    './content/**/*.md',
   ],
   theme: {
     fontFamily: {
-      sans: ['Montserrat', 'sans-serif']
+      sans: ['Montserrat', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -15,10 +18,10 @@ module.exports = {
         background: 'rgba(var(--background-color), <alpha-value>)',
         txtcolor: 'rgba(var(--text-color), <alpha-value>)',
         container: 'rgba(var(--container-background-color), <alpha-value>)',
-      }
+      },
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    typography,
   ],
-}
+};
