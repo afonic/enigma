@@ -4,7 +4,7 @@ blueprint: pages
 title: 'Boat transfers in Mykonos'
 template: home
 updated_by: ba27a63e-de6c-453c-8412-674ab2fa36ba
-updated_at: 1667234468
+updated_at: 1668853337
 builder:
   -
     heading: 'Welcome to the webpage for **Enigma Yachting** !'
@@ -20,7 +20,7 @@ builder:
             marks:
               -
                 type: bold
-            text: Emmelia
+            text: Enigma
           -
             type: text
             text: " is a stunning 12 meter leisure powerboat ideal for\_"

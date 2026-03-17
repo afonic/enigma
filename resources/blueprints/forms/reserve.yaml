@@ -86,7 +86,7 @@ sections:
         field:
           inline: false
           options:
-            agree: 'I consent for the processing of my personal data provided above by Emmelia Catamaran'
+            agree: 'I consent for the processing of my personal data provided above by Enigma Yachting'
           display: Privacy
           type: checkboxes
           icon: checkboxes
